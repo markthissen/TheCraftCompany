@@ -16,30 +16,84 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
+
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+
 	</title>
+
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('bootstrap');
+    echo $this->Html->script('jquery');
+    echo $this->Html->script('bootstrap');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
 </head>
+
 <body>
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">The Craft Company</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><?php echo $this->Html->link('Home',
+    array(
+        'controller' => 'home',
+        'action' => 'index',
+        'full_base' => true
+    ));?>
+    </li>
+      <li><a href="#">About</a></li>
+       <li><a href="#">Products</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <input type="text" class="form-control col-lg-8" placeholder="Search">
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><?php echo $this->Html->link('Log In',
+    array(
+        'controller' => 'users',
+        'action' => 'login',
+        'full_base' => true
+    ));?>
+    </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+  <center>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
 		<div id="content">
 
@@ -47,15 +101,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+  </center>
+
+
 </body>
 </html>

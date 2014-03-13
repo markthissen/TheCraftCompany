@@ -24,8 +24,7 @@ class User extends AppModel{
 			)
 
 		);
-
-
+	
 	public function beforeSave( $options = array() ){
 
 		$this->data['User']['password'] = Security::hash($this->data['User']['password'], 'sha1', true);

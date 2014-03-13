@@ -32,15 +32,14 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public function beforeFilter(){
-		parent::beforeFilter();
 
-		if( $this->request->action != 'login' && !$this->Session->check('User')){
-			$this->Session->setFlash('Go back idiot');
-			$this->redirect(array(
-				'controller' => 'users',
-				'action' => 'login'
-			));
-		}
-	}
+	public $helpers = array(
+		'Session',
+		'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
+		'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+		'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
+	);
+
+
+
 }
