@@ -33,8 +33,8 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap');
-    echo $this->Html->script('jquery');
-    echo $this->Html->script('bootstrap');
+   		echo $this->Html->script('jquery');
+    	echo $this->Html->script('bootstrap');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -43,52 +43,6 @@
 </head>
 
 <body>
-<div class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">The Craft Company</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><?php echo $this->Html->link('Home',
-    array(
-        'controller' => 'home',
-        'action' => 'index',
-        'full_base' => true
-    ));?>
-    </li>
-      <li><a href="#">About</a></li>
-       <li><a href="#">Products</a></li>
-    </ul>
-    <form class="navbar-form navbar-left">
-      <input type="text" class="form-control col-lg-8" placeholder="Search">
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><?php echo $this->Html->link('Log In',
-    array(
-        'controller' => 'users',
-        'action' => 'login',
-        'full_base' => true
-    ));?>
-    </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-
 
 
   <center>

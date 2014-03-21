@@ -29,7 +29,7 @@ class UsersController extends AppController {
 			if ($user){
 				$this->Session->write('User', $user);
 				$this->redirect(array(
-					'controller' => 'users',
+					'controller' => 'user',
 					'action' => 'adduser'
 					));
 			}
