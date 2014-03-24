@@ -17,7 +17,7 @@
                     </li>
                     <li><?php echo $this->Html->link('About', '/about/about');?></a>    
                     </li>
-                    <li><a href="blog.html">Product</a>
+                    <li><?php echo $this->Html->link('Products', '/products/index');?></a>
                     </li>   
                     <li><a href="contact.html">Register/Login</a>
                     </li>
