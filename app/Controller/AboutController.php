@@ -2,7 +2,7 @@
 
 class AboutController extends AppController{
 	
-	public function about(){
+	public function index(){
 		
 	}
 }

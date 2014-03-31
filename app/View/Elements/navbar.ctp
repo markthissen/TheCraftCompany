@@ -15,11 +15,11 @@
                 <ul class="nav navbar-nav">
                     <li><?php echo $this->Html->link('Home', '/home/index');?></a>
                     </li>
-                    <li><?php echo $this->Html->link('About', '/about/about');?></a>    
+                    <li><?php echo $this->Html->link('About', '/about/index');?></a>    
                     </li>
-                    <li><a href="blog.html">Product</a>
+                    <li><?php echo $this->Html->link('Products', '/products/index');?></a>
                     </li>   
-                    <li><a href="contact.html">Register/Login</a>
+                    <li><?php echo $this->Html->link('Login/Register', '/users/login');?></a>
                     </li>
                 </ul>
             </div>

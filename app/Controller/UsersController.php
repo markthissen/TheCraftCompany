@@ -2,6 +2,7 @@
 
 class UsersController extends AppController {
 
+
 	public function index(){
 
 		$users = $this->User->find('all');
@@ -10,14 +11,14 @@ class UsersController extends AppController {
 		$this->set('users', $users);
 	}
 
-	public function adduser(){
+	public function register(){
 		if( $this->request->is('post')) {
 
 		$this->User->save($this->request->data);
 		$this->redirect('/users');
 
 	}
-	}
+	}	
 
 	public function login(){
 

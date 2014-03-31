@@ -32,7 +32,10 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('bootstrap');
+		    
+        echo $this->Html->css('bootstrap');
+        echo $this->Html->css('business-casual');
+
    		echo $this->Html->script('jquery');
     	echo $this->Html->script('bootstrap');
 
@@ -44,6 +47,11 @@
 
 <body>
 
+	<div class="brand">The Craft Company</div>
+
+	<?php
+        echo $this->element('navbar');
+    ?>
 
   <center>
 	<div id="container">
