@@ -14,9 +14,15 @@ Secure login/logout/register system. Passwords hashed using md5 and then salted.
 
 Some Screenshots:
 
+### Homepage
+
 ![Homepage](http://imgur.com/ZGUuZoC.png)
 
+### Products
+
 ![Example Product Page](http://imgur.com/9JNpHG3.png)
+
+### Empty Cart
 
 ![Cart Page](http://i.imgur.com/GtL4I1e.png)
 
