@@ -32,9 +32,9 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		    
-        echo $this->Html->css('bootstrap');
-        echo $this->Html->css('business-casual');
+		echo $this->Html->css('bootstrap');
+        echo $this->Html->css('custom');
+        echo $this->Html->css('shop');	
 
    		echo $this->Html->script('jquery');
     	echo $this->Html->script('bootstrap');
@@ -46,10 +46,14 @@
 </head>
 
 <body>
+<?php
 
-	<div class="brand">The Craft Company</div>
+	 	echo $this->Html->image('header.png', array(
+   									"class" => "img-responsive img-full",
+   									"alt"   => "slide 1"
+   									 )); 
 
-	<?php
+	
         echo $this->element('navbar');
     ?>
 
@@ -58,13 +62,11 @@
 		<div id="header">
 		</div>
 		<div id="content">
-
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
   </center>
 
 

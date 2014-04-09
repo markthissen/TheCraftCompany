@@ -19,8 +19,26 @@
                     </li>
                     <li><?php echo $this->Html->link('Products', '/products/index');?></a>
                     </li>   
-                    <li><?php echo $this->Html->link('Login/Register', '/users/login');?></a>
+                    <li><?php 
+                    if  (AuthComponent::user()):
+                        echo $this->Html->link('<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span class="badge" id="cart-counter">0</span>',
+                                        array('controller'=>'carts','action'=>'view'),array('escape'=>false));
+                    endif ?>
+                    </li></a>
+                    <li>
+                    <?php
+                    if (AuthComponent::user()):
+                            // The user is logged in, show the logout link
+                            echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+
+                            else:
+                            // The user is not logged in, show login link
+                            echo $this->Html->link('Log in/Register', array('controller' => 'users', 'action' => 'login'));
+                            endif;
+                            ?></a>
+
                     </li>
+                    </ul>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

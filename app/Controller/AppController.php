@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Application level Controller
@@ -32,10 +34,43 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    //declare form helpers for bootstrap+cakephp
 	public $helpers = array(
 		'Session',
 		'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
 		'Form' => array('className' => 'BoostCake.BoostCakeForm'),
 		'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
 	);
+
+    //declare the auth components for logging in
+	    public $components = array(
+        'Auth' => array(
+            'authenticate' => array(
+                'Form' => array(
+                    'fields' => array(
+                        'username' => 'email',
+                    ),
+
+                )
+            ),
+            'loginRedirect' => array('controller' => 'users', 'action' => 'home'),
+            'logoutRedirect' => array('controller' => 'users', 'action' => 'logout'),
+            'authError' => 'Sorry, please login first',
+            'loginError' => 'Your password was incorrect!',
+            'autoRedirect' => false
+        )
+    );
+
+
+	public function beforeFilter() {
+        
+        $this->Auth->allow();
+
+
+ 
 }
+
+ 
+}
+
+	

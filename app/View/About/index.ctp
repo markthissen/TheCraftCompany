@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-</head>
-
+<html>
 <body>
-
-    
-
-
     <div class="container">
 
         <div class="row">
@@ -33,7 +18,8 @@
                 </div>
                 <div class="col-md-6">
                     <p>Welcome to The Craft Company where there are products and gifts to suit people from every walk of life.</p>
-                    <p>From </p>
+                    <p>All at amazing prices and with your customer experience in mind </p>
+                    <p>Happy Shopping!</p>
                 <div class="clearfix"></div>
             </div>
         </div>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -14,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="container">
 
         <div class="row">
@@ -26,28 +24,35 @@
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
 
-                            	<?php echo $this->Html->image('slide-4.jpg', array(
+                            	<?php echo $this->Html->image('slide1.jpg', array(
    									"class" => "img-responsive img-full",
    									"alt"   => "slide 1"
    									 )); ?>  
                             </div>
                             <div class="item">
-                                <?php echo $this->Html->image('slide-2.jpg', array(
+                                <?php echo $this->Html->image('slide-4.jpg', array(
    									"class" => "img-responsive img-full",
    									"alt"   => "slide 2"
    									 )); ?>  
                             </div>
                             <div class="item">
-                                <?php echo $this->Html->image('slide-3.jpg', array(
+                                <?php echo $this->Html->image('slide2.jpg', array(
    									"class" => "img-responsive img-full",
    									"alt" => "slide 3"
    									 )); ?>  
+                            </div>
+                             <div class="item">
+                                <?php echo $this->Html->image('slide3.jpg', array(
+                                    "class" => "img-responsive img-full",
+                                    "alt" => "slide 3"
+                                     )); ?>  
                             </div>
                         </div>
 
@@ -67,27 +72,10 @@
                     </h1>
                     <hr class="tagline-divider">
                     
+                    
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Fantastic Products <strong>made for you</strong>
-                    </h2>
-                    <hr>
-                    <?php echo $this->Html->image('intro-pic.jpg', array(
-   						"class" => "img-responsive img-border img-left",
-   						"alt"   => "intro pic"
-   						)); ?>  
-                    <hr class="visible-xs">
-                    <p>123 123</p>
-                </div>
-            </div>
-        </div>
-
 
     <!-- JavaScript -->
     <script>
